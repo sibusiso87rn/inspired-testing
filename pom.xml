@@ -8,7 +8,45 @@
     <artifactId>service-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cucumber.version>4.7.1</cucumber.version>
+        <testng.version>6.9.9</testng.version>
+    </properties>
+
     <dependencies>
+
+        <!--TestNG-->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+        </dependency>
+        <!--TestNG-->
+
+        <!--Cucumber Dependencies-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--Cucumber Dependencies-->
 
         <!--RestAssured-->
         <dependency>
@@ -17,7 +55,6 @@
             <version>3.3.0</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
@@ -25,7 +62,6 @@
             <scope>test</scope>
         </dependency>
         <!--RestAssured-->
-
 
         <!--Hamcrest-->
         <dependency>
@@ -42,13 +78,22 @@
         </dependency>
         <!--Hamcrest-->
 
-
-
         <!--Logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.0.13</version>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
         </dependency>
         <!--Logging -->
 
@@ -70,7 +115,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testng/TestNG-Remote.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                 </configuration>

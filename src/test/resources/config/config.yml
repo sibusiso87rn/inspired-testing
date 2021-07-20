@@ -1,0 +1,4 @@
+projectName: Services Test
+trendsPathName: target/testing-trends.json
+cucumberReportPathName: target/cucumber-report.json
+environment: DEV
