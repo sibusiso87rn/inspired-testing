@@ -1,17 +1,16 @@
 package co.za.inspiredtesting.core.reports.dto;
 
-public class ReportDTO {
+public class ReportConfig {
 
     private String projectName;
     private String trendsPathName;
     private String cucumberReportPathName;
     private String environment;
 
-    public ReportDTO(){
-
+    public ReportConfig(){
     }
 
-    public ReportDTO(String projectName, String trendsPathName, String cucumberReportPathName, String environment) {
+    public ReportConfig(String projectName, String trendsPathName, String cucumberReportPathName, String environment) {
         super();
         this.projectName = projectName;
         this.trendsPathName = trendsPathName;

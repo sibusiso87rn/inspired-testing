@@ -2,7 +2,7 @@
     <parameter name="environment"  value="DEV"/>
     <test name="Users API">
         <classes>
-            <class name="co.za.inspiredtesting.services.TestRunner"/>
+            <class name="co.za.inspiredtesting.tests.TestRunner"/>
         </classes>
     </test>
 </suite>
