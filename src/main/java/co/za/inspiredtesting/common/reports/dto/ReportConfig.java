@@ -1,4 +1,4 @@
-package co.za.inspiredtesting.core.reports.dto;
+package co.za.inspiredtesting.common.reports.dto;
 
 public class ReportConfig {
 

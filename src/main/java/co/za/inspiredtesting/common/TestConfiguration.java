@@ -1,12 +1,11 @@
-package co.za.inspiredtesting.core.util;
+package co.za.inspiredtesting.common;
 
 
-import co.za.inspiredtesting.core.reports.dto.ReportConfig;
+import co.za.inspiredtesting.common.reports.dto.ReportConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 
 public class TestConfiguration {
@@ -43,7 +42,7 @@ public class TestConfiguration {
 
     private ReportConfig initReportConfig() throws IOException {
         logger.info("Loading test report configs from location {}", REPORT_CONFIG_LOCATION);
-        return mapper.readValue(FilesUtil.getFile(REPORT_CONFIG_LOCATION), ReportConfig.class);
+        return mapper.readValue(co.za.inspiredtesting.web.util.FilesUtil.getFile(REPORT_CONFIG_LOCATION), ReportConfig.class);
     }
 
     public ReportConfig getReportConfig() {

@@ -1,5 +1,5 @@
 ---
-cucumberReportPathName: target/cucumber-report.json
+cucumberReportPathName: cucumber-report.json
 environment: DEV
 projectName: "Services Test"
-trendsPathName: target/testing-trends.json
+trendsPathName: testing-trends.json

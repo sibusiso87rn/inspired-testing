@@ -1,4 +1,4 @@
-package co.za.inspiredtesting.core.util;
+package co.za.inspiredtesting.web.util;
 
 import java.io.File;
 import java.net.URL;

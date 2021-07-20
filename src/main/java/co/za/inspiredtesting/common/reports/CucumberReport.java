@@ -1,8 +1,7 @@
-package co.za.inspiredtesting.core.reports;
+package co.za.inspiredtesting.common.reports;
 
-import co.za.inspiredtesting.core.reports.dto.ReportConfig;
-import co.za.inspiredtesting.core.util.FilesUtil;
-import co.za.inspiredtesting.core.util.TestConfiguration;
+import co.za.inspiredtesting.common.reports.dto.ReportConfig;
+import co.za.inspiredtesting.common.TestConfiguration;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.slf4j.Logger;
@@ -34,12 +33,11 @@ public class CucumberReport {
         public void createReport(){
 
             logger.info("******************Building Report******************");
-
             File reportOutputDirectory = new File("target");
             List<String> jsonFiles = new ArrayList<>();
 
             logger.info("Setting report target to : {}",reportConfig.getCucumberReportPathName());
-            jsonFiles.add(reportConfig.getCucumberReportPathName());
+            jsonFiles.add("target/cucumber-report.json");
 
             String projectName = reportConfig.getProjectName();
 
@@ -50,10 +48,10 @@ public class CucumberReport {
             //Trends this will file will need to maintained and not deleted in order to keep the trend
             try {
                 logger.info("Saving trends file on location: "+ trendsPathName);
-                configuration.setTrends(FilesUtil.getFile(trendsPathName),this.trendsLimit);
+                configuration.setTrends(co.za.inspiredtesting.web.util.FilesUtil.getFile(trendsPathName),this.trendsLimit);
             }catch (Exception e){
-                logger.warn("Trends file not found, creating new one",e);
-                configuration.setTrends(new File(trendsPathName),this.trendsLimit);
+                logger.warn("Trends file not found, creating new one {}",e.getMessage());
+                configuration.setTrends(new File("target/"+trendsPathName),this.trendsLimit);
             }
 
             try{
