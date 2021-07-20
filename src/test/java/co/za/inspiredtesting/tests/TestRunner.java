@@ -1,7 +1,5 @@
 package co.za.inspiredtesting.tests;
 
-import co.za.inspiredtesting.core.reports.dto.ReportConfig;
-import co.za.inspiredtesting.core.util.TestConfiguration;
 import io.cucumber.testng.CucumberOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,4 +22,8 @@ public class TestRunner {
         private static final Logger logger
                 = LoggerFactory.getLogger(TestRunner.class);
 
+        @Test
+        public void sample(){
+
+        }
 }
