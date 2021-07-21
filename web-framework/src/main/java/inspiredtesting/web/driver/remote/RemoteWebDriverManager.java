@@ -4,12 +4,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import inspiredtesting.web.interfaces.IWebDriverSetup;
+import inspiredtesting.web.interfaces.IRemoteWebDriverSetup;
 
 import java.net.URL;
 import java.util.Properties;
 
-public enum RemoteWebDriverManager implements IWebDriverSetup {
+public enum RemoteWebDriverManager implements IRemoteWebDriverSetup {
     CHROME {
         public DesiredCapabilities getDesiredCapabilities(Properties browserProperties){
             DesiredCapabilities capabilities = new DesiredCapabilities();

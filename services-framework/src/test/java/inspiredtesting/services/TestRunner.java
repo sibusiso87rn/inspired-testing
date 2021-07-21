@@ -1,6 +1,6 @@
 package inspiredtesting.services;
 
-import inspiredtesting.services.common.reports.CucumberReport;
+import inspiredtesting.reports.CucumberReport;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;

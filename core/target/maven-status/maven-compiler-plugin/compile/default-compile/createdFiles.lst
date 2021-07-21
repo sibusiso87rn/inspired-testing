@@ -1,4 +1,4 @@
-inspiredtesting/services/common/reports/dto/ReportConfig.class
-inspiredtesting/services/common/TestConfiguration.class
-inspiredtesting/services/common/util/FilesUtil.class
-inspiredtesting/services/common/reports/CucumberReport.class
+inspiredtesting/services/util/FilesUtil.class
+inspiredtesting/reports/CucumberReport.class
+inspiredtesting/services/TestConfiguration.class
+inspiredtesting/reports/dto/ReportConfig.class

@@ -1,6 +1,6 @@
 package inspiredtesting.web.driver.local;
 
-import inspiredtesting.web.interfaces.IWebDriverSetup;
+import inspiredtesting.web.interfaces.ILocalWebDriverSetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public enum LocalDriverManager implements IWebDriverSetup {
+public enum LocalDriverManager implements ILocalWebDriverSetup {
 
     CHROME {
         public DesiredCapabilities getDesiredCapabilities(){
@@ -20,7 +20,7 @@ public enum LocalDriverManager implements IWebDriverSetup {
             return capabilities;
         }
 
-        public WebDriver getLocalWebDriverObject(DesiredCapabilities capabilities,String binaryLocation){
+        public WebDriver getLocalWebDriverObject(DesiredCapabilities capabilities){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
@@ -37,13 +37,12 @@ public enum LocalDriverManager implements IWebDriverSetup {
             return capabilities;
         }
 
-        public WebDriver getLocalWebDriverObject(DesiredCapabilities capabilities,String binaryLocation) {
+        public WebDriver getLocalWebDriverObject(DesiredCapabilities capabilities) {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--start-maximized");
             options.merge(capabilities);
             return new FirefoxDriver(options);
         }
-
-    },
+    }
 }

@@ -1,10 +1,10 @@
-package inspiredtesting.services.common;
+package inspiredtesting.services;
 
 
-import inspiredtesting.services.common.reports.dto.ReportConfig;
+import inspiredtesting.reports.dto.ReportConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import inspiredtesting.services.common.util.FilesUtil;
+import inspiredtesting.services.util.FilesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;

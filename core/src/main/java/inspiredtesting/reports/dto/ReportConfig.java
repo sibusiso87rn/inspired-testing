@@ -1,4 +1,4 @@
-package inspiredtesting.services.common.reports.dto;
+package inspiredtesting.reports.dto;
 
 public class ReportConfig {
 

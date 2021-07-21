@@ -1,6 +1,6 @@
 package inspiredtesting.services.data;
 
-import inspiredtesting.services.common.util.FilesUtil;
+import inspiredtesting.services.util.FilesUtil;
 
 import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
