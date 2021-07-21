@@ -13,16 +13,13 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-
     private static final Logger logger
             = LoggerFactory.getLogger(Hooks.class);
 
     @Before
     public void initializeTest (Scenario scenario)  {
-
         logger.info("Running scenario  {} ", scenario.getName());
         RestAssured.baseURI = RestHandler.BASE_PATH;
-        RequestSpecification request = RestAssured.given();
     }
 
 }
