@@ -1,0 +1,14 @@
+inspiredtesting/web/interfaces/ILocalWebDriverSetup.class
+inspiredtesting/web/driver/remote/RemoteWebDriverManager$2.class
+inspiredtesting/web/driver/enums/BrowserRunEnvironment.class
+inspiredtesting/web/driver/local/LocalDriverManager$1.class
+inspiredtesting/web/driver/remote/RemoteWebDriverManager$1.class
+inspiredtesting/web/driver/local/LocalDriverManager.class
+inspiredtesting/web/driver/remote/RemoteWebDriverManager$3.class
+inspiredtesting/web/driver/remote/RemoteWebDriverManager.class
+inspiredtesting/web/driver/WebDriverFactory.class
+inspiredtesting/web/BasePage.class
+inspiredtesting/web/validations/UserActions.class
+inspiredtesting/web/interfaces/IRemoteWebDriverSetup.class
+inspiredtesting/web/driver/local/LocalDriverManager$2.class
+inspiredtesting/web/driver/WebDriverFactory$1.class

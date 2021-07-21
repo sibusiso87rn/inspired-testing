@@ -1,0 +1,8 @@
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/BasePage.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/driver/enums/BrowserRunEnvironment.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/driver/remote/RemoteWebDriverManager.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/driver/local/LocalDriverManager.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/interfaces/ILocalWebDriverSetup.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/interfaces/IRemoteWebDriverSetup.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/validations/UserActions.java
+/Users/sibusiso87rn/IdeaProjects/automation-framework/web-framework/src/main/java/inspiredtesting/web/driver/WebDriverFactory.java

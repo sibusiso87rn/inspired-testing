@@ -1,1 +1,111 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 68000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "The user is on the landing page",
+            "match": {
+              "location": "inspiredtesting.web.tests.stepdefs.DepositStepDefs.theUserIsOnTheLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-21T18:44:36.953Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "inspiredtesting.web.tests.Hooks.initializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "As a user I want to be able to deposit funds",
+        "description": "",
+        "id": "deposit;as-a-user-i-want-to-be-able-to-deposit-funds;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 256000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "The user clicks the log on button",
+            "match": {
+              "location": "inspiredtesting.web.tests.stepdefs.DepositStepDefs.theUserClicksTheLogOnButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "The user selects a log on name \"name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"name\"",
+                  "offset": 31
+                }
+              ],
+              "location": "inspiredtesting.web.tests.stepdefs.DepositStepDefs.theUserSelectsALogOnName(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Deposit"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Deposit",
+    "description": "",
+    "id": "deposit",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Banking.feature",
+    "tags": [
+      {
+        "name": "@Deposit",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 10
+        }
+      }
+    ]
+  }
+]

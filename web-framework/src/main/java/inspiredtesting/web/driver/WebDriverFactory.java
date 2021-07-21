@@ -2,8 +2,10 @@ package inspiredtesting.web.driver;
 
 
 import inspiredtesting.web.driver.enums.BrowserRunEnvironment;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import inspiredtesting.web.driver.local.LocalDriverManager;
@@ -16,6 +18,8 @@ public class WebDriverFactory {
 
     private static final Logger logger
             = LoggerFactory.getLogger(WebDriverFactory.class);
+
+    private static final int WEB_DRIVER_WAIT = 10;
 
     private static WebDriverFactory webDriverFactoryInstance     = null;
     private static final ThreadLocal<WebDriver> webDriverThreadLocal   = new ThreadLocal<>();
@@ -42,12 +46,19 @@ public class WebDriverFactory {
         webDriverThreadLocal.remove();
     }
 
+
+    public void waitForBrowserToLoad(){
+        new WebDriverWait(getThreadLocalWebDriver(), WEB_DRIVER_WAIT).until(
+                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+    }
+
+
     public void createThreadLocalDriver(Properties driverProperties) throws Exception {
 
         logger.info("Creating Web Driver for Thread Id {}, running on {} environment",Thread.currentThread().getId(),driverProperties.getProperty("browser.run.environment").toUpperCase());
         BrowserRunEnvironment browserRunEnvironment = BrowserRunEnvironment.valueOf(driverProperties.getProperty("browser.run.environment").toUpperCase());
 
-        WebDriver driver = null;
+        WebDriver driver;
         switch (browserRunEnvironment){
             case LOCAL:
                 LocalDriverManager localDriverManager = LocalDriverManager.valueOf(driverProperties.getProperty("browser").toUpperCase());

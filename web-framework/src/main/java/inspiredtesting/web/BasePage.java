@@ -13,6 +13,7 @@ public abstract class BasePage {
             = LoggerFactory.getLogger(BasePage.class);
 
     public BasePage(){
+        logger.info("Getting driver for page");
         driver = WebDriverFactory.getInstance().getThreadLocalWebDriver();
         logger.info("Creating page object ["+this.getClass().getSimpleName()+"]");
         PageFactory.initElements(driver,this);
