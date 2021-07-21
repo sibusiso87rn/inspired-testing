@@ -4,10 +4,7 @@ import inspiredtesting.web.driver.WebDriverFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +31,7 @@ public class UserActions {
     public static void click(WebElement element) {
         try {
             logger.info("About to click on element "  + element.toString());
+            getFluentWait().until(ExpectedConditions.elementToBeClickable(element));
             element.click();
         } catch (Exception e) {
             logger.error("Failed to click on element " + e.getMessage());
@@ -52,10 +50,31 @@ public class UserActions {
         }
     }
 
+    public static void input(WebElement element, String data) {
+        try {
+            waitForElementEnabled(element);
+            logger.debug("Sending keys to element " + element.toString());
+            element.sendKeys(data);
+        } catch (Exception e) {
+            logger.error("Failed to input data on element :" + e.getMessage());
+            assertThat(false, is(equalTo(true)));
+        }
+    }
+
     public static FluentWait getFluentWait(){
         return new FluentWait<>(WebDriverFactory.getInstance().getThreadLocalWebDriver())
                 .withTimeout(Duration.ofSeconds(WAIT_TIME))
             .pollingEvery(Duration.ofMillis(1000))
             .ignoring(NoSuchElementException.class);
+    }
+
+    public static void waitForElementEnabled(final WebElement element) {
+        try {
+            getFluentWait().until((ExpectedCondition<Boolean>) driver -> element.isEnabled());
+            logger.info("Element is enabled" + element.isEnabled());
+        } catch (Exception e) {
+            logger.info(
+                    e + " : " + "Timed out waiting for element: " + element);
+        }
     }
 }

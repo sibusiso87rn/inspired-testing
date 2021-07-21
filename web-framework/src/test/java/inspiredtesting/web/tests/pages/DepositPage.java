@@ -4,7 +4,7 @@ import inspiredtesting.web.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class WelcomePage extends BasePage {
+public class DepositPage extends BasePage {
 
     @FindBy(css = "button[ng-class='btnClass2']")
     private WebElement btnDeposit;
@@ -14,6 +14,9 @@ public class WelcomePage extends BasePage {
 
     @FindBy(css = "button[class='btn btn-default']")
     private WebElement btnDepositAmount;
+
+    @FindBy(css = "span[ng-show='message']")
+    private WebElement lblDepositMessage;
 
     public WebElement getBtnDeposit() {
         return btnDeposit;
@@ -25,5 +28,9 @@ public class WelcomePage extends BasePage {
 
     public WebElement getBtnDepositAmount() {
         return btnDepositAmount;
+    }
+
+    public WebElement getLblDepositMessage() {
+        return lblDepositMessage;
     }
 }

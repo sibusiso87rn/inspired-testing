@@ -7,17 +7,17 @@ import org.openqa.selenium.support.FindBy;
 public class LandingPage extends BasePage {
 
     @FindBy(className = "mainHeading")
-    private WebElement mainHeading;
+    private WebElement lblMainHeading;
 
     @FindBy(css = "button[class='btn btn-primary btn-lg']")
-    private WebElement logonButton;
+    private WebElement btnLogonButton;
 
     public WebElement getHeading() {
-        return mainHeading;
+        return lblMainHeading;
     }
 
-    public WebElement getLogonButton() {
-        return logonButton;
+    public WebElement getBtnLogonButton() {
+        return btnLogonButton;
     }
 
 }

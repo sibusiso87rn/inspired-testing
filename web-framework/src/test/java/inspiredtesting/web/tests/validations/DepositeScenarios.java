@@ -2,14 +2,14 @@ package inspiredtesting.web.tests.validations;
 
 import inspiredtesting.web.tests.pages.LandingPage;
 import inspiredtesting.web.tests.pages.UserSelectPage;
-import inspiredtesting.web.tests.pages.WelcomePage;
+import inspiredtesting.web.tests.pages.DepositPage;
 import inspiredtesting.web.validations.UserActions;
 
-public class LogOnValidations {
+public class DepositeScenarios {
 
     LandingPage landingPage   = new LandingPage();
     UserSelectPage userSelect = new UserSelectPage();
-    WelcomePage welcomePage   = new WelcomePage();
+    DepositPage depositPage   = new DepositPage();
 
     public void validatePageHeader(String expectedPageHeader){
         UserActions.validateText(landingPage.getHeading(),expectedPageHeader);
@@ -28,12 +28,18 @@ public class LogOnValidations {
     }
 
     public void clickTheDepositButton(){
-        UserActions.click(welcomePage.getBtnDeposit());
+        UserActions.click(depositPage.getBtnDeposit());
     }
 
     public void enterDepositAmount(String depositAmount){
-        UserActions.input(welcomePage.getBtnDeposit(),depositAmount);
+        UserActions.input(depositPage.getTxtDepositAmount(),depositAmount);
     }
 
+    public void depositAmount(){
+        UserActions.click(depositPage.getBtnDepositAmount());
+    }
 
+    public void validateDepositSuccessful(){
+        UserActions.validateText(depositPage.getLblDepositMessage(),"Deposit Successful");
+    }
 }
