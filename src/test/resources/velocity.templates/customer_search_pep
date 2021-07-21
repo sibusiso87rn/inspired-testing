@@ -1,0 +1,13 @@
+{
+  "companyId": 15,
+  "returnAddressInfo": true,
+  "returnBankRelationships": true,
+  "returnBankServices": true,
+  "returnConsentIndicatorsInfo": true,
+  "returnContactInfo": true,
+  "returnDemographicInfo": true,
+  "returnIdNumbersInfo": true,
+  "returnQualEmploymentInfo": true,
+  "returnRegulatoryInfo": true,
+  "ucn": $ucn
+}

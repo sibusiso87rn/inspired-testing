@@ -1,0 +1,29 @@
+{
+  "accounts": [
+    {
+      "accountIcon": "string",
+      "accountName": "string",
+      "accountNo": 0,
+      "status": "string",
+      "type": "string"
+    }
+  ],
+  "affordability": {
+    "expenses": [
+      {
+        "amount": 0,
+        "description": "string",
+        "expenseType": "BUREAU"
+      }
+    ],
+    "income": [
+      {
+        "amount": 0,
+        "incomeType": "ASSET_DISPOSAL"
+      }
+    ]
+  },
+  "preselected": true,
+  "transactionalAccount": true,
+  "ucn": $ucn
+}

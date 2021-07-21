@@ -11,9 +11,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import org.testng.Assert;
-import org.testng.annotations.*;
 
 public class APIStepDefs {
 
@@ -45,5 +43,17 @@ public class APIStepDefs {
     public void iValidateThatTheUsernameIsCorrect(String expectedUsername) {
         jsonPathEvaluator = response.jsonPath();
         Assert.assertEquals(jsonPathEvaluator.get("username"),expectedUsername);
+    }
+
+    @Given("I GET users from the users API")
+    public void iGETUsersFromTheUsersAPI() {
+        request  = RestAssured.given();
+        response = request.get("users");
+    }
+
+    @And("The response has {string} users")
+    public void theResponseHasUsers(String expectedNumberOfUsers) {
+        jsonPathEvaluator = response.jsonPath();
+        Assert.assertEquals(Integer.parseInt(expectedNumberOfUsers),response.jsonPath().getList("$").size());
     }
 }

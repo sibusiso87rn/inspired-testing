@@ -1,0 +1,19 @@
+{
+  "company": "FIRST_NATIONAL_BANK_OF_SOUTH_AFRICA_LTD",
+  "risk": {
+     "kycIndicator": $kycIndicator,
+     "kycConfirmedDate": 1574892000000,
+     "riskIndicator": "3",
+     "idConfirmed": $idConfirmed,
+     "salaryConfirmed": "Y",
+     "employmentConfirmedDate": 1574892000000,
+     "employmentConfirmName": "FNB",
+     "addressConfirmed": $addressconfirmed,
+     "debtCounseling": $debtCounseling,
+     "vip": "N",
+     "sourceOfFunds": [
+       "I01"
+     ]
+   },
+  "ucn": $ucn
+}

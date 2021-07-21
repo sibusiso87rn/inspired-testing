@@ -1,0 +1,27 @@
+{
+    "kycIndicator": "$kycindicator",
+    "kycDate": "2018-03-14",
+    "addressVerified": "Y",
+    "idVerified": "Y",
+    "sancScreenStatus": "01",
+    "bankDecisonInd": "",
+    "compliant": "Y",
+    "riskRating": "99",
+    "placeHardHoldInd": "N",
+    "forexBlockInd": "N",
+    "empSicCode": "",
+    "srcOfFundCounter": 1,
+    "sourceOfFunds": [
+      {
+        "sofCode": "I01",
+        "sofDesc": "SALARY",
+        "sofDate": "2019-10-01"
+      }
+    ],
+    "foreignTaxInd": "N",
+    "foreignTaxRecCounter": 3,
+    "selfCertDate": null,
+    "selfCertExpDate": "2020-11-08",
+    "foreignCityOfBirth": "JOHANNESBURG",
+    "debtCouncilInd": "$debtcouncilindicator"
+  }
