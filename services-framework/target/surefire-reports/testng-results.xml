@@ -1,92 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Service Regression Testing" duration-ms="5241" started-at="2021-07-21T13:10:33Z" finished-at="2021-07-21T13:10:38Z">
+  <suite name="Service Regression Testing" duration-ms="386" started-at="2021-07-21T19:24:34Z" finished-at="2021-07-21T19:24:34Z">
     <groups>
       <group name="cucumber scenarios">
-        <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="scenario" class="inspiredtesting.services.TestRunner"/>
+        <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.TestRunner@6ebc05a6]" name="scenario" class="inspiredtesting.services.tests.TestRunner"/>
       </group> <!-- cucumber scenarios -->
     </groups>
-    <test name="Users" duration-ms="5241" started-at="2021-07-21T13:10:33Z" finished-at="2021-07-21T13:10:38Z">
-      <class name="inspiredtesting.services.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="setUpClass" is-config="true" duration-ms="383" started-at="2021-07-21T16:10:33Z" finished-at="2021-07-21T16:10:33Z">
+    <test name="Users" duration-ms="386" started-at="2021-07-21T19:24:34Z" finished-at="2021-07-21T19:24:34Z">
+      <class name="inspiredtesting.services.tests.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:inspiredtesting.services.tests.TestRunner@6ebc05a6]" name="setUpClass" is-config="true" duration-ms="362" started-at="2021-07-21T22:24:34Z" finished-at="2021-07-21T22:24:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="scenario" duration-ms="2861" started-at="2021-07-21T16:10:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-21T16:10:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["I post a new user to the typicode"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Compute Sum]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [203] but found [500]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [203] but found [500]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:372)
-	at org.testng.Assert.assertEquals(Assert.java:382)
-	at inspiredtesting.services.stepdefs.APIStepDefs.iReceiveAValidHTTPResponseCode(APIStepDefs.java:39)
-	at ✽.I receive a valid HTTP response code "203"(file:///Users/sibusiso87rn/IdeaProjects/automation-framework/services-framework/src/test/resources/features/Users.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="scenario" duration-ms="1106" started-at="2021-07-21T16:10:36Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-21T16:10:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["I get a user from the users API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Compute Sum]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="scenario" duration-ms="812" started-at="2021-07-21T16:10:37Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-21T16:10:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Get users from the users API"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Compute Sum]"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="tearDownClass" is-config="true" duration-ms="64" started-at="2021-07-21T16:10:38Z" finished-at="2021-07-21T16:10:38Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:inspiredtesting.services.tests.TestRunner@6ebc05a6]" name="tearDownClass" is-config="true" duration-ms="15" started-at="2021-07-21T22:24:34Z" finished-at="2021-07-21T22:24:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="tearCreateReport()[pri:0, instance:inspiredtesting.services.TestRunner@7d907bac]" name="tearCreateReport" is-config="true" duration-ms="676" started-at="2021-07-21T16:10:38Z" finished-at="2021-07-21T16:10:38Z">
+        <test-method status="PASS" signature="tearCreateReport()[pri:0, instance:inspiredtesting.services.tests.TestRunner@6ebc05a6]" name="tearCreateReport" is-config="true" duration-ms="517" started-at="2021-07-21T22:24:34Z" finished-at="2021-07-21T22:24:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearCreateReport -->
-      </class> <!-- inspiredtesting.services.TestRunner -->
+      </class> <!-- inspiredtesting.services.tests.TestRunner -->
     </test> <!-- Users -->
   </suite> <!-- Service Regression Testing -->
 </testng-results>

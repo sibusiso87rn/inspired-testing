@@ -1,5 +1,6 @@
 package inspiredtesting.web.tests;
 
+import inspiredtesting.reports.CucumberReport;
 import inspiredtesting.web.driver.WebDriverFactory;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
@@ -13,6 +14,7 @@ import java.util.Properties;
 
 @CucumberOptions(
         plugin  = {
+                "inspiredtesting.web.report.ExtentReportListener",
                 "pretty",
                 "json:target/cucumber-report.json",
         },
@@ -67,11 +69,6 @@ public class WebTestRunner {
         //Quit appium driver
         logger.info("Quitting thread driver for scenario");
         WebDriverFactory.getInstance().getThreadLocalWebDriver().quit();
-    }
-
-    @AfterSuite(alwaysRun = true)
-    public void tearCreateReport() {
-
     }
 
     private Properties getTestProperties(String browserVersion,String browser,String browserRunEnvironment){

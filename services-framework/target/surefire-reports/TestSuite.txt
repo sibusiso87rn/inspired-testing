@@ -1,7 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.208 s <<< FAILURE! - in TestSuite
-inspiredtesting.services.TestRunner.scenario  Time elapsed: 2.866 s  <<< FAILURE!
-java.lang.AssertionError: expected [203] but found [500]
-
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.17 s - in TestSuite

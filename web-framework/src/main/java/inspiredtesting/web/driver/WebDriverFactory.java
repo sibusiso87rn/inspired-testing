@@ -23,6 +23,8 @@ public class WebDriverFactory {
 
     private static WebDriverFactory webDriverFactoryInstance     = null;
     private static final ThreadLocal<WebDriver> webDriverThreadLocal   = new ThreadLocal<>();
+    private static final ThreadLocal<Properties> driverPropertiesThreadLocal = new ThreadLocal<>();
+
 
     private WebDriverFactory(){
     }
@@ -39,11 +41,21 @@ public class WebDriverFactory {
         return webDriverThreadLocal.get();
     }
 
+    public Properties getThreadLocalProperties(){
+        return driverPropertiesThreadLocal.get();
+    }
+
     public void quitThreadLocalWebDriver(){
+
         logger.debug("Quiting web driver");
         getThreadLocalWebDriver().quit();
+
+        //Cleanup
         logger.debug("Removing driver instance");
         webDriverThreadLocal.remove();
+        logger.debug("Removing properties instance");
+        driverPropertiesThreadLocal.remove();
+
     }
 
 
@@ -76,7 +88,12 @@ public class WebDriverFactory {
                 logger.error("Browser enviroment not specified");
                 driver = null;
         }
+
+        //Set thread local browser
         webDriverThreadLocal.set(driver);
+
+        //Set thread-local properties
+        driverPropertiesThreadLocal.set(driverProperties);
     }
 
 }

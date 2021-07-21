@@ -4,7 +4,7 @@
 <suite name="Service Regression Testing" verbose="1">
       <test name="Users">
         <classes>
-            <class name="inspiredtesting.services.TestRunner"/>
+            <class name="inspiredtesting.services.tests.TestRunner"/>
         </classes>
     </test>
 </suite>

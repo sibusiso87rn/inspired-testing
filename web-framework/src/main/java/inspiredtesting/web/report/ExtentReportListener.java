@@ -1,4 +1,4 @@
-package inspiredtesting.reports;
+package inspiredtesting.web.report;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.gherkin.model.Given;
@@ -6,12 +6,12 @@ import com.aventstack.extentreports.model.Attribute;
 import com.aventstack.extentreports.service.ExtentService;
 import inspiredtesting.reports.dto.ReportConfig;
 import inspiredtesting.services.tests.TestConfiguration;
+import inspiredtesting.web.driver.WebDriverFactory;
 import io.cucumber.plugin.ConcurrentEventListener;
 import io.cucumber.plugin.event.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import inspiredtesting.web.driver.WebDriverFactory;
 
 
 import java.net.InetAddress;
