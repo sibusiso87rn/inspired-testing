@@ -1,4 +1,4 @@
-package inspiredtesting.services.util;
+package inspiredtesting.services.tests.util;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;

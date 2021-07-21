@@ -1,8 +1,8 @@
 package inspiredtesting.reports;
 
-import inspiredtesting.services.TestConfiguration;
+import inspiredtesting.services.tests.TestConfiguration;
 import inspiredtesting.reports.dto.ReportConfig;
-import inspiredtesting.services.util.FilesUtil;
+import inspiredtesting.services.tests.util.FilesUtil;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.slf4j.Logger;

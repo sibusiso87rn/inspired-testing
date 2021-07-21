@@ -1,0 +1,4 @@
+projectName: Web Project
+trendsPathName: cucumber-trends-report.json
+cucumberReportPathName: cucumber-report.json
+environment: DEV

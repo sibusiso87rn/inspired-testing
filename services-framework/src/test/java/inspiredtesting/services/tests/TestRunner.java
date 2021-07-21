@@ -1,4 +1,4 @@
-package inspiredtesting.services;
+package inspiredtesting.services.tests;
 
 import inspiredtesting.reports.CucumberReport;
 import io.cucumber.testng.CucumberOptions;

@@ -1,6 +1,6 @@
-package inspiredtesting.services;
+package inspiredtesting.services.tests;
 
-import inspiredtesting.services.data.RestHandler;
+import inspiredtesting.services.tests.data.RestHandler;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.restassured.RestAssured;

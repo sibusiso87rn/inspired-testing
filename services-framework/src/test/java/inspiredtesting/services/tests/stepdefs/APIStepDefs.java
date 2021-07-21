@@ -1,6 +1,6 @@
-package inspiredtesting.services.stepdefs;
+package inspiredtesting.services.tests.stepdefs;
 
-import inspiredtesting.services.data.TestData;
+import inspiredtesting.services.tests.data.TestData;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
