@@ -5,5 +5,5 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public interface ILocalWebDriverSetup {
     WebDriver getLocalWebDriverObject(DesiredCapabilities desiredCapabilitie);
-    DesiredCapabilities getDesiredCapabilities();
+    DesiredCapabilities getDesiredCapabilities(String browserVersion);
 }

@@ -1,6 +1,7 @@
 package inspiredtesting.web.driver;
 
 
+import inspiredtesting.web.driver.enums.BrowserRunEnvironment;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.slf4j.Logger;
@@ -51,16 +52,18 @@ public class WebDriverFactory {
             case LOCAL:
                 LocalDriverManager localDriverManager = LocalDriverManager.valueOf(driverProperties.getProperty("browser").toUpperCase());
                 logger.info("Creating web driver for browser {}", driverProperties.getProperty("browser"));
-                //DesiredCapabilities desiredCapabilities = localDriverManager.getDesiredCapabilities();
-                //driver  = localDriverManager.getLocalWebDriverObject(desiredCapabilities, localDriverManager.getDriverLocation());
+                DesiredCapabilities desiredCapabilities = localDriverManager.getDesiredCapabilities(driverProperties.getProperty("browser.version"));
+                driver  = localDriverManager.getLocalWebDriverObject(desiredCapabilities);
                 break;
             case GRID:
                 logger.info("Creating remote web driver for browser {}, them remote url is {}", driverProperties.getProperty("browser"),driverProperties.getProperty("grid.remote.url"));
                 RemoteWebDriverManager remoteWebDriverManager = RemoteWebDriverManager.valueOf(driverProperties.getProperty("browser").toUpperCase());
-                //desiredCapabilities = remoteWebDriverManager.getDesiredCapabilities(driverProperties);
-                //driver              = remoteWebDriverManager.getWebDriverObject(new URL(driverProperties.getProperty("grid.remote.url")), desiredCapabilities);
+                desiredCapabilities = remoteWebDriverManager.getDesiredCapabilities(driverProperties);
+                driver              = remoteWebDriverManager.getWebDriverObject(new URL(driverProperties.getProperty("grid.remote.url")), desiredCapabilities);
                 break;
             default:
+                logger.error("Browser enviroment not specified");
+                driver = null;
         }
         webDriverThreadLocal.set(driver);
     }

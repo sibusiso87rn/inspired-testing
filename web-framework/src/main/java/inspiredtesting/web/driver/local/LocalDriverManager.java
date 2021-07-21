@@ -12,11 +12,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public enum LocalDriverManager implements ILocalWebDriverSetup {
 
     CHROME {
-        public DesiredCapabilities getDesiredCapabilities(){
+        public DesiredCapabilities getDesiredCapabilities(String browserVersion){
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("browser", "chrome");
-            //TODO Add browser version
-            //capabilities.setCapability("browser_version", "");
+            capabilities.setCapability("browser_version", browserVersion);
             return capabilities;
         }
 
@@ -29,11 +28,10 @@ public enum LocalDriverManager implements ILocalWebDriverSetup {
         }
     },
     FIREFOX {
-        public DesiredCapabilities getDesiredCapabilities(){
+        public DesiredCapabilities getDesiredCapabilities(String browserVersion){
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("browser", "firefox");
-            //TODO Add browser version
-            //capabilities.setCapability("browser_version", "");
+            capabilities.setCapability("browser_version", browserVersion);
             return capabilities;
         }
 

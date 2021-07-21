@@ -17,17 +17,19 @@ import org.testng.annotations.*;
         glue        = {""},
         tags        = "@Dev"
 )
-public class TestRunner {
+public class WebTestRunner {
 
 
     private TestNGCucumberRunner testNGCucumberRunner;
     private static final Logger logger
-            = LoggerFactory.getLogger(TestRunner.class);
+            = LoggerFactory.getLogger(WebTestRunner.class);
 
     @BeforeClass(alwaysRun = true)
-    @Parameters({"environment","test.configuration","run.environment"})
-    public void setTestNGProperties(String environment,String testConfiguration,String runEnvironment) throws Exception{
+    @Parameters({"browser.version","browser"})
+    public void setTestNGProperties(String browserVersion,String browser) throws Exception{
         String baseUrl;
+
+
     }
 
     @BeforeClass(alwaysRun = true)
