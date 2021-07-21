@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Service Regression Testing]">
+  <test name="Users(failed)">
+    <classes>
+      <class name="inspiredtesting.services.TestRunner">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="tearCreateReport"/>
+          <include name="setUpClass"/>
+          <include name="scenario" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- inspiredtesting.services.TestRunner -->
+    </classes>
+  </test> <!-- Users(failed) -->
+</suite> <!-- Failed suite [Service Regression Testing] -->

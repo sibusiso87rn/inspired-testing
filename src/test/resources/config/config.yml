@@ -1,5 +1,0 @@
----
-cucumberReportPathName: cucumber-report.json
-environment: DEV
-projectName: "Services Test"
-trendsPathName: testing-trends.json
