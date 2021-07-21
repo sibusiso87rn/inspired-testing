@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Regression" duration-ms="10859" started-at="2021-07-21T19:24:22Z" finished-at="2021-07-21T19:24:33Z">
+  <suite name="Regression" duration-ms="17755" started-at="2021-07-21T19:30:46Z" finished-at="2021-07-21T19:31:03Z">
     <groups>
       <group name="cucumber scenarios">
         <method signature="WebTestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="scenario" class="inspiredtesting.web.tests.WebTestRunner"/>
       </group> <!-- cucumber scenarios -->
     </groups>
-    <test name="FireFox" duration-ms="10859" started-at="2021-07-21T19:24:22Z" finished-at="2021-07-21T19:24:33Z">
+    <test name="FireFox" duration-ms="17755" started-at="2021-07-21T19:30:46Z" finished-at="2021-07-21T19:31:03Z">
       <class name="inspiredtesting.web.tests.WebTestRunner">
-        <test-method status="PASS" signature="setTestNGProperties(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="setTestNGProperties" is-config="true" duration-ms="8953" started-at="2021-07-21T22:24:22Z" finished-at="2021-07-21T22:24:31Z">
+        <test-method status="PASS" signature="setTestNGProperties(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="setTestNGProperties" is-config="true" duration-ms="12756" started-at="2021-07-21T22:30:46Z" finished-at="2021-07-21T22:30:58Z">
           <params>
             <param index="0">
               <value>
@@ -31,11 +31,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setTestNGProperties -->
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="setUpClass" is-config="true" duration-ms="423" started-at="2021-07-21T22:24:31Z" finished-at="2021-07-21T22:24:31Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="setUpClass" is-config="true" duration-ms="777" started-at="2021-07-21T22:30:58Z" finished-at="2021-07-21T22:30:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="scenario" duration-ms="818" started-at="2021-07-21T22:24:31Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-21T22:24:32Z">
+        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="scenario" duration-ms="1115" started-at="2021-07-21T22:30:59Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-21T22:31:00Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="tearDownClass" is-config="true" duration-ms="657" started-at="2021-07-21T22:24:32Z" finished-at="2021-07-21T22:24:33Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:inspiredtesting.web.tests.WebTestRunner@3cef309d]" name="tearDownClass" is-config="true" duration-ms="3098" started-at="2021-07-21T22:31:00Z" finished-at="2021-07-21T22:31:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

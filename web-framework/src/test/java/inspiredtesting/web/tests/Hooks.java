@@ -19,32 +19,21 @@ public class Hooks {
             = LoggerFactory.getLogger(Hooks.class);
 
     @After
-    public void afterScenario(Scenario scenario)  throws Exception{
+    public void afterScenario(Scenario scenario) {
         logger.info("------------------------------");
         logger.info(scenario.getName() + " - Status - " + scenario.getStatus());
         logger.info("------------------------------");
-
-        //Take a screenshot if there's a failure
-        takeScreenshotOnFailure(scenario);
-
-        //Quit appium driver after each scenario
-        logger.info("Quiting driver after scenario " + scenario.getName());
-    }
-
-    @Before
-    public void beforeScenario(Scenario scenario)  throws Exception{
-        logger.info("------------------------------");
-        logger.info(scenario.getName() + " - Status - " + scenario.getStatus());
-        logger.info("------------------------------");
-    }
-
-    //If there is a need to take a screenshot after each step :(
-    @AfterStep
-    public void takeScreenshotAfterStep(Scenario scenario) {
         takeScreenshot(scenario);
     }
 
-    private void takeScreenshotOnFailure(Scenario scenario) throws IOException {
+    @Before
+    public void beforeScenario(Scenario scenario) {
+        logger.info("------------------------------");
+        logger.info(scenario.getName() + " - Status - " + scenario.getStatus());
+        logger.info("------------------------------");
+    }
+
+    private void takeScreenshotOnFailure(Scenario scenario){
         logger.info("Taking screenshot IF Test Failed");
         if (scenario.isFailed()) {
             takeScreenshot(scenario);
@@ -52,7 +41,7 @@ public class Hooks {
     }
 
     private void takeScreenshot(Scenario scenario) {
-        logger.info("Taking screenshot...");
+        logger.info("Taking screenshot for scenario [{}]",scenario.getName());
         try {
             byte[] screenShot = ((TakesScreenshot) WebDriverFactory.getInstance().getThreadLocalWebDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenShot,"image/png", UUID.randomUUID().toString().replace("-","")+".png");
