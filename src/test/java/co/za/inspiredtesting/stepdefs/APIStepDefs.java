@@ -24,7 +24,8 @@ public class APIStepDefs {
 
     @When("I POST a new user")
     public void iPOSTANewUser() {
-
+        request.header("Content-Type", "application/json");
+        request.body(requestParams.toJSONString());
     }
 
     @Then("I receive a valid HTTP response code {string}")

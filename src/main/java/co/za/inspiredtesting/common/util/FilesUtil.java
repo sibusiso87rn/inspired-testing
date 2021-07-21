@@ -1,4 +1,4 @@
-package co.za.inspiredtesting.web.util;
+package co.za.inspiredtesting.common.util;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -22,7 +22,6 @@ public class FilesUtil {
     }
 
     public static String updateJSON(Map testData, String templateName){
-
         VelocityEngine velocity = new VelocityEngine();
         velocity.init();
         VelocityContext context = new VelocityContext(testData);
