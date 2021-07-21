@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression" thread-count="1" parallel="tests">
+    <test name="Chrome">
+        <parameter name="browser.version"    value="0.27.0"/>
+        <parameter name="browser"    value="firefox"/>
+        <classes>
+            <class name="inspiredtesting.web.tests.TestRunner"/>
+        </classes>
+    </test>
+</suite>
+
+

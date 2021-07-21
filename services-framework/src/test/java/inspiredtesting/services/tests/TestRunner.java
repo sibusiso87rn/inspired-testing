@@ -19,7 +19,7 @@ import org.testng.annotations.*;
         },
         features    = {"src/test/resources/features" },
         glue        = {""},
-        tags        = "@Dev"
+        tags        = "@Regression"
 )
 public class TestRunner {
 

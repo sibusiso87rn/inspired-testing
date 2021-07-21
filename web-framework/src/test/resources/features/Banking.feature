@@ -1,4 +1,4 @@
-@Dev
+@Deposit @Regression
 Feature: Deposit
   Background:
     Given The user is on the landing page
