@@ -15,8 +15,8 @@ public class DepositStepDefs {
     }
 
     @And("The user selects a log on name {string}")
-    public void theUserSelectsALogOnName(String userName) {
-
+    public void theUserSelectsALogOnName(String userName) throws InterruptedException {
+        logOnValidations.selectUserOnDropDownList(userName);
     }
 
     @When("The user clicks the log on button")
