@@ -18,6 +18,9 @@ public class DepositPage extends BasePage {
     @FindBy(css = "span[ng-show='message']")
     private WebElement lblDepositMessage;
 
+    @FindBy(id = "accountSelect")
+    private WebElement lstAccounts;
+
     public WebElement getBtnDeposit() {
         return btnDeposit;
     }
@@ -32,5 +35,9 @@ public class DepositPage extends BasePage {
 
     public WebElement getLblDepositMessage() {
         return lblDepositMessage;
+    }
+
+    public WebElement getLstAccounts() {
+        return lstAccounts;
     }
 }

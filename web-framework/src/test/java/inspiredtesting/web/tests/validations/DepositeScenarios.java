@@ -42,4 +42,8 @@ public class DepositeScenarios {
     public void validateDepositSuccessful(){
         UserActions.validateText(depositPage.getLblDepositMessage(),"Deposit Successful");
     }
+
+    public void selectAccountNumber(String accountNumber){
+        UserActions.selectListElementByText(depositPage.getLstAccounts(),accountNumber);
+    }
 }

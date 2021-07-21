@@ -48,4 +48,9 @@ public class DepositStepDefs {
     public void theUserDepositIsSuccessful() {
         logOnValidations.validateDepositSuccessful();
     }
+
+    @And("The enters a deposit amount of {string} on the account {string}")
+    public void theEntersADepositAmountOfOnTheAccount(String depositAmount, String accountNumber) {
+
+    }
 }
