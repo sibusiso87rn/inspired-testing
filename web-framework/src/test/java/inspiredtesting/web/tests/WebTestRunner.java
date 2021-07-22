@@ -20,7 +20,7 @@ import java.util.Properties;
         },
         features    = {"src/test/resources/features" },
         glue        = {""},
-        tags        = "@Regression"
+        tags        = "@Transactions"
 )
 public class WebTestRunner {
 
@@ -29,22 +29,12 @@ public class WebTestRunner {
     private static final Logger logger
             = LoggerFactory.getLogger(WebTestRunner.class);
 
+
     @BeforeClass(alwaysRun = true)
     @Parameters({"browser.version","browser","browser.run.environment"})
     public void setTestNGProperties(String browserVersion,String browser,String browserRunEnvironment) throws Exception{
 
-        //TODO make this a config
-        String baseUrl = "http://www.way2automation.com/angularjs-protractor/banking/#/login";
-
-        logger.info("Creating thread local driver for scenario");
-        WebDriverFactory.getInstance().createThreadLocalDriver(getTestProperties(browserVersion,browser,browserRunEnvironment));
-
-        logger.info("Navigating to {}",baseUrl);
-        WebDriverFactory.getInstance().getThreadLocalWebDriver().navigate().to(baseUrl);
-
-        logger.info("Waiting for driver to fully load");
-        WebDriverFactory.getInstance().waitForBrowserToLoad();
-
+        WebDriverFactory.getInstance().createThreadProperties(getTestProperties(browserVersion,browser,browserRunEnvironment));
     }
 
     @BeforeClass(alwaysRun = true)
@@ -65,10 +55,11 @@ public class WebTestRunner {
     @AfterClass(alwaysRun = true)
     public void tearDownClass() {
         testNGCucumberRunner.finish();
+    }
 
-        //Quit appium driver
+    @AfterTest
+    public void quitDriver() {
         logger.info("Quitting thread driver for scenario");
-        WebDriverFactory.getInstance().getThreadLocalWebDriver().quit();
     }
 
     private Properties getTestProperties(String browserVersion,String browser,String browserRunEnvironment){

@@ -2,14 +2,12 @@ package inspiredtesting.web.validations;
 
 import inspiredtesting.web.driver.WebDriverFactory;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -23,12 +21,13 @@ public class UserActions {
 
     private static final int WAIT_TIME = 15;
 
-    public static void validateText(WebElement element,String expectedText){
+    public static void validateText(final WebElement element,String expectedText){
         logger.info("Executing text compare Actual ["+element.getText()+"] Expecting [" + expectedText+"]");
+        getFluentWait().until(ExpectedConditions.visibilityOf(element));
         assertThat(element.getText(), is(equalTo(expectedText)));
     }
 
-    public static void click(WebElement element) {
+    public static void click(final WebElement element) {
         try {
             logger.info("About to click on element "  + element.toString());
             getFluentWait().until(ExpectedConditions.elementToBeClickable(element));
@@ -39,7 +38,7 @@ public class UserActions {
         }
     }
 
-    public static void selectListElementByText(WebElement element,String visibleText) {
+    public static void selectListElementByText(final WebElement element,String visibleText) {
         try {
             logger.info("About to click on element on the list {},element list {}"  + element.toString(),visibleText);
             getFluentWait().until(ExpectedConditions.elementToBeClickable(element));
@@ -50,7 +49,7 @@ public class UserActions {
         }
     }
 
-    public static void input(WebElement element, String data) {
+    public static void input(final WebElement element, String data) {
         try {
             waitForElementEnabled(element);
             logger.debug("Sending keys to element " + element.toString());
@@ -64,8 +63,8 @@ public class UserActions {
     public static FluentWait getFluentWait(){
         return new FluentWait<>(WebDriverFactory.getInstance().getThreadLocalWebDriver())
                 .withTimeout(Duration.ofSeconds(WAIT_TIME))
-            .pollingEvery(Duration.ofMillis(1000))
-            .ignoring(NoSuchElementException.class);
+                .pollingEvery(Duration.ofMillis(1000))
+                .ignoring(NoSuchElementException.class);
     }
 
     public static void waitForElementEnabled(final WebElement element) {

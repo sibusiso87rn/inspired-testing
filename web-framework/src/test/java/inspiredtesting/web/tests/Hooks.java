@@ -18,19 +18,35 @@ public class Hooks {
     private static final Logger logger
             = LoggerFactory.getLogger(Hooks.class);
 
+
+    //TODO make this a config
+    String baseUrl = "http://www.way2automation.com/angularjs-protractor/banking/#/login";
+
     @After
     public void afterScenario(Scenario scenario) {
         logger.info("------------------------------");
         logger.info(scenario.getName() + " - Status - " + scenario.getStatus());
         logger.info("------------------------------");
         takeScreenshot(scenario);
+        WebDriverFactory.getInstance().getThreadLocalWebDriver().quit();
     }
 
     @Before
-    public void beforeScenario(Scenario scenario) {
+    public void beforeScenario(Scenario scenario) throws Exception {
         logger.info("------------------------------");
         logger.info(scenario.getName() + " - Status - " + scenario.getStatus());
         logger.info("------------------------------");
+
+        WebDriverFactory.getInstance().createThreadLocalDriver();
+        WebDriverFactory.getInstance().getThreadLocalWebDriver().navigate().to(baseUrl);
+        WebDriverFactory.getInstance().waitForBrowserToLoad();
+
+    }
+
+    //If there is a need to take a screenshot after each step :(
+    @AfterStep
+    public void takeScreenshotAfterStep(Scenario scenario) {
+        takeScreenshot(scenario);
     }
 
     private void takeScreenshotOnFailure(Scenario scenario){

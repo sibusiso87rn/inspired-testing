@@ -2,10 +2,10 @@ package inspiredtesting.web.driver;
 
 
 import inspiredtesting.web.driver.enums.BrowserRunEnvironment;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import inspiredtesting.web.driver.local.LocalDriverManager;
@@ -13,6 +13,8 @@ import inspiredtesting.web.driver.remote.RemoteWebDriverManager;
 
 import java.net.URL;
 import java.util.Properties;
+
+import static inspiredtesting.web.validations.UserActions.getFluentWait;
 
 public class WebDriverFactory {
 
@@ -46,26 +48,29 @@ public class WebDriverFactory {
     }
 
     public void quitThreadLocalWebDriver(){
-
         logger.debug("Quiting web driver");
         getThreadLocalWebDriver().quit();
-
         //Cleanup
         logger.debug("Removing driver instance");
         webDriverThreadLocal.remove();
+
+    }
+
+    public void removeThreadLocalProperties(){
+        //Cleanup
         logger.debug("Removing properties instance");
         driverPropertiesThreadLocal.remove();
-
     }
 
 
     public void waitForBrowserToLoad(){
-        new WebDriverWait(getThreadLocalWebDriver(), WEB_DRIVER_WAIT).until(
-                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+        getFluentWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class='btn btn-primary btn-lg']")));
     }
 
 
-    public void createThreadLocalDriver(Properties driverProperties) throws Exception {
+    public void createThreadLocalDriver() throws Exception {
+
+        Properties driverProperties = getThreadLocalProperties();
 
         logger.info("Creating Web Driver for Thread Id {}, running on {} environment",Thread.currentThread().getId(),driverProperties.getProperty("browser.run.environment").toUpperCase());
         BrowserRunEnvironment browserRunEnvironment = BrowserRunEnvironment.valueOf(driverProperties.getProperty("browser.run.environment").toUpperCase());
@@ -92,9 +97,14 @@ public class WebDriverFactory {
         //Set thread local browser
         webDriverThreadLocal.set(driver);
 
+
+    }
+
+    public void createThreadProperties(Properties driverProperties){
         //Set thread-local properties
         driverPropertiesThreadLocal.set(driverProperties);
     }
+
 
 }
 
