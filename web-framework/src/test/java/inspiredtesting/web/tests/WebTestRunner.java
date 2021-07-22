@@ -20,7 +20,7 @@ import java.util.Properties;
         },
         features    = {"src/test/resources/features" },
         glue        = {""},
-        tags        = "@Transactions"
+        tags        = "@Regression"
 )
 public class WebTestRunner {
 
