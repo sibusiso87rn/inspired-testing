@@ -1,0 +1,6 @@
+{
+  id: $id,
+  title: 'foo',
+  body: 'bar',
+  userId: $id
+}

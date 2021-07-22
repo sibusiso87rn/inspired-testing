@@ -30,7 +30,6 @@ public class APIStepDefs {
         request.header("Content-Type", "application/json; charset=UTF-8");
         request.body(userRequest);
         response = request.post("/posts");
-        logger.debug(response.prettyPrint());
     }
 
     @Then("I receive a valid HTTP response code {string}")

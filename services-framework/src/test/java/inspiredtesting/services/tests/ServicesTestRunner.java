@@ -21,11 +21,11 @@ import org.testng.annotations.*;
         glue        = {""},
         tags        = "@Regression"
 )
-public class TestRunner {
+public class ServicesTestRunner {
 
         private TestNGCucumberRunner testNGCucumberRunner;
         private static final Logger logger
-                = LoggerFactory.getLogger(TestRunner.class);
+                = LoggerFactory.getLogger(ServicesTestRunner.class);
 
         @BeforeClass(alwaysRun = true)
         public void setUpClass(){

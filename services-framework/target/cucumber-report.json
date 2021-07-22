@@ -1,0 +1,255 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2021-07-22T07:53:56.369Z",
+        "before": [
+          {
+            "result": {
+              "duration": 274000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "inspiredtesting.services.tests.Hooks.initializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "I post a new user to the typicode",
+        "description": "",
+        "id": "compute-sum;i-post-a-new-user-to-the-typicode",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1450000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I POST a new user",
+            "match": {
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iPOSTANewUser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I receive a valid HTTP response code \"201\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"201\"",
+                  "offset": 37
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iReceiveAValidHTTPResponseCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2021-07-22T07:53:58.146Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "inspiredtesting.services.tests.Hooks.initializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "I get a user from the users API",
+        "description": "",
+        "id": "compute-sum;i-get-a-user-from-the-users-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 137000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I GET a user \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 13
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iGETAUser(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I receive a valid HTTP response code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 37
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iReceiveAValidHTTPResponseCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 246000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I validate that the username is correct \"Bret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bret\"",
+                  "offset": 40
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iValidateThatTheUsernameIsCorrect(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": []
+      },
+      {
+        "start_timestamp": "2021-07-22T07:53:58.531Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "inspiredtesting.services.tests.Hooks.initializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Get users from the users API",
+        "description": "",
+        "id": "compute-sum;get-users-from-the-users-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 113000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I GET users from the users API",
+            "match": {
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iGETUsersFromTheUsersAPI()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I receive a valid HTTP response code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 37
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.iReceiveAValidHTTPResponseCode(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The response has \"10\" users",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 17
+                }
+              ],
+              "location": "inspiredtesting.services.tests.stepdefs.APIStepDefs.theResponseHasUsers(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Compute Sum",
+    "description": "",
+    "id": "compute-sum",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Users.feature",
+    "tags": [
+      {
+        "name": "@Regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
