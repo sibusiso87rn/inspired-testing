@@ -22,7 +22,8 @@ public enum LocalDriverManager implements ILocalWebDriverSetup {
         public WebDriver getLocalWebDriverObject(DesiredCapabilities capabilities){
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
+            options.addArguments("--headless", "--window-size=1920,1200");
+            //options.addArguments("--start-maximized");
             options.merge(capabilities);
             return new ChromeDriver(options);
         }

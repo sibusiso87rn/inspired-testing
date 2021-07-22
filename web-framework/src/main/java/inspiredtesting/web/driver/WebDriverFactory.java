@@ -21,8 +21,6 @@ public class WebDriverFactory {
     private static final Logger logger
             = LoggerFactory.getLogger(WebDriverFactory.class);
 
-    private static final int WEB_DRIVER_WAIT = 10;
-
     private static WebDriverFactory webDriverFactoryInstance     = null;
     private static final ThreadLocal<WebDriver> webDriverThreadLocal   = new ThreadLocal<>();
     private static final ThreadLocal<Properties> driverPropertiesThreadLocal = new ThreadLocal<>();
