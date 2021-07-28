@@ -22,6 +22,7 @@
 
 * You can specify if you want a specific driver and or specific browser on the testng file
 * The framework will download and run it
+* NOTE: The driver might take time to download if its being used for the first time.
 
 ##Reports
 

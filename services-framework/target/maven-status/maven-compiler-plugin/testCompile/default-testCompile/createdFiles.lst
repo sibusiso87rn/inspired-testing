@@ -1,1 +1,5 @@
+inspiredtesting/services/tests/data/RestHandler.class
 inspiredtesting/services/tests/ServicesTestRunner.class
+inspiredtesting/services/tests/stepdefs/APIStepDefs.class
+inspiredtesting/services/tests/data/TestData.class
+inspiredtesting/services/tests/Hooks.class

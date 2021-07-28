@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Service Regression Testing" duration-ms="5006" started-at="2021-07-22T07:57:38Z" finished-at="2021-07-22T07:57:43Z">
+  <suite started-at="2021-07-28T06:46:36Z" name="Service Regression Testing" finished-at="2021-07-28T06:46:42Z" duration-ms="5561">
     <groups>
       <group name="cucumber scenarios">
-        <method signature="ServicesTestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="scenario" class="inspiredtesting.services.tests.ServicesTestRunner"/>
+        <method signature="ServicesTestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" name="scenario" class="inspiredtesting.services.tests.ServicesTestRunner"/>
       </group> <!-- cucumber scenarios -->
     </groups>
-    <test name="Users" duration-ms="5006" started-at="2021-07-22T07:57:38Z" finished-at="2021-07-22T07:57:43Z">
+    <test started-at="2021-07-28T06:46:36Z" name="Users" finished-at="2021-07-28T06:46:42Z" duration-ms="5561">
       <class name="inspiredtesting.services.tests.ServicesTestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="setUpClass" is-config="true" duration-ms="351" started-at="2021-07-22T10:57:38Z" finished-at="2021-07-22T10:57:39Z">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:36Z" name="setUpClass" finished-at="2021-07-28T09:46:37Z" duration-ms="327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="scenario" duration-ms="2366" started-at="2021-07-22T10:57:39Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-22T10:57:41Z">
+        <test-method signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:37Z" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-28T09:46:40Z" duration-ms="3419" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="scenario" duration-ms="1274" started-at="2021-07-22T10:57:41Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-22T10:57:42Z">
+        <test-method signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:40Z" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-28T09:46:41Z" duration-ms="1159" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="scenario" duration-ms="937" started-at="2021-07-22T10:57:42Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-22T10:57:43Z">
+        <test-method signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:41Z" name="scenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-28T09:46:42Z" duration-ms="581" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -62,11 +62,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="tearDownClass" is-config="true" duration-ms="68" started-at="2021-07-22T10:57:43Z" finished-at="2021-07-22T10:57:43Z">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:42Z" name="tearDownClass" finished-at="2021-07-28T09:46:42Z" duration-ms="63" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method status="PASS" signature="tearCreateReport()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@6ebc05a6]" name="tearCreateReport" is-config="true" duration-ms="703" started-at="2021-07-22T10:57:43Z" finished-at="2021-07-22T10:57:44Z">
+        <test-method is-config="true" signature="tearCreateReport()[pri:0, instance:inspiredtesting.services.tests.ServicesTestRunner@7f552bd3]" started-at="2021-07-28T09:46:42Z" name="tearCreateReport" finished-at="2021-07-28T09:46:43Z" duration-ms="739" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearCreateReport -->
